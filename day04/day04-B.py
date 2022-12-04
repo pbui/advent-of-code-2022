@@ -25,7 +25,7 @@ def main():
         1 for p1, p2 in pairs if (p1 & p2) in (p1, p2)
     )
     disjoints = sum(
-        1 for p1, p2 in pairs if not p1.isdisjoint(p2)
+        1 for p1, p2 in pairs if p1 & p2
     )
     print(f'Day 4-A: {contained}')
     print(f'Day 4-B: {disjoints}')
