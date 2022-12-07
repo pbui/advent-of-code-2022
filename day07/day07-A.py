@@ -46,7 +46,7 @@ def count_filesystem_r(fs, cwd, counts):
 def main():
     fs    = parse_filesystem()
     sizes = count_filesystem(fs)
-    print(f'Day 07-A: {sum(size for name, size in sizes.items() if size <= THRESHOLD)}')
+    print(f'Day 07-A: {sum(size for size in sizes.values() if size <= THRESHOLD)}')
 
 if __name__ == '__main__':
     main()

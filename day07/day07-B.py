@@ -50,8 +50,8 @@ def main():
     sizes      = count_filesystem(fs)
     free_space = TOTAL_SPACE - sizes['/']
     thresholdb = THRESHOLDB - free_space
-    print(f'Day 07-A: {sum(size for name, size in sizes.items() if size <= THRESHOLDA)}')
-    print(f'Day 07-B: {min(size for name, size in sizes.items() if size >= thresholdb)}')
+    print(f'Day 07-A: {sum(size for size in sizes.values() if size <= THRESHOLDA)}')
+    print(f'Day 07-B: {min(size for size in sizes.values() if size >= thresholdb)}')
 
 if __name__ == '__main__':
     main()
