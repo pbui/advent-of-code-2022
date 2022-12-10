@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-from collections import deque
 import sys
 
 # Constants
@@ -28,7 +27,6 @@ class Machine:
                 self.trace[self.cycle + 1] = self.x
                 self.x     += int(operand)
                 self.cycle += 2
-
 
     def generate_crt(self):
         for row in range(CRT_HEIGHT):
