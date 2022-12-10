@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-from collections import deque
 import sys
 
 # Constants
@@ -18,7 +17,7 @@ class Machine:
     def process_instructions(self, stream=sys.stdin):
         for instruction in map(str.strip, stream):
             self.trace[self.cycle] = self.x
-            
+
             if instruction == 'noop':
                 self.cycle += 1
             else:
